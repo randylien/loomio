@@ -1,4 +1,4 @@
-class Translation
+class AppTranslation
   LANGUAGES = {'English' => :en,
                'български' => :bg,
                'Català' => :ca,
@@ -26,7 +26,7 @@ class Translation
   FRONTPAGE_SUPPORTED_LOCALES = [:en, :pt, :el, :es, :ca, :cs, :fr, :uk, :nl]
 
   VIDEO_SUPPORTED_LOCALES  = [:en, :pt, :el, :es, :ca, :cs, :fr, :ja, :nl, :vi]
-
+  
   def self.language(locale)
     LANGUAGES.key(locale.to_sym)
   end
@@ -61,4 +61,5 @@ class Translation
       title: "#{I18n.t(:change_language, language: language[0])}",
       text: "#{language[0]}" }
   end
+
 end
